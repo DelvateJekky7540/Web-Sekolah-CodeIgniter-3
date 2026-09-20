@@ -442,25 +442,12 @@
     </section>
 
 	<?php $this->load->view('layouts/_footer') ?>
-
-	<script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-	<script>new PureCounter();</script>
-	
-
-    <script>
-        const CHATBOT_API_URL = "<?= base_url('chatbot/chat') ?>";
-    </script>
-
-    <script src="<?= base_url('assets/js/chatbot.js') ?>"></script>
-
-
-
-
-
+	<?php $this->load->view('layouts/_chatbot') ?>
 
 	
+	
 
-
+    
 </body>
 
 </html>

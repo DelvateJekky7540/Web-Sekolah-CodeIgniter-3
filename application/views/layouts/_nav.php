@@ -2,9 +2,7 @@
     <div class="container">
 
         <a class="navbar-brand d-flex align-items-center gap-2" href="<?= base_url('home/') ?>">
-            <!-- <div class="bg-white rounded-circle p-2"> -->
-                <img src="<?= base_url('assets/img/smk.png') ?>" alt="" style="width: 40px;">
-            <!-- </div> -->
+            <img src="<?= base_url('assets/img/smk.png') ?>" alt="" style="width: 40px;">
 
             <div style="line-height: 1.15;">
                 <strong>SMKN 2</strong><br>
@@ -28,24 +26,12 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('home/profil') ?>">
-                        Profil
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('home/artikel') ?>">
-                        Artikel
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="https://spmb.jatengprov.go.id/" target="_blank">
                         PPDB
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#blud">
+                    <a class="nav-link" href="<?= base_url('home/artikel') ?>">
                         BLUD
                     </a>
                 </li>
