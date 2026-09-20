@@ -1,0 +1,36 @@
+:root {
+    --font-besar: 'Poppins', sans-serif;
+    --font-tebal: 'Poppins', sans-serif;
+    --font-kecil: Arial, sans-serif;
+}
+
+h1 {
+    font-family: var(--font-besar);
+    font-weight: 700;
+}
+
+h2, h3 {
+    font-family: var(--font-tebal);
+    font-weight: 600;
+}
+
+p {
+    font-family: var(--font-kecil);
+}
+
+body {
+    overflow-x: hidden;
+    background: #F8FAFC;
+}
+/* 
+@media(max-width:991px){
+
+    .navbar-collapse{
+        padding-top:10px;
+    }
+
+    .navbar-nav{
+        gap:10px;
+    }
+
+} */
