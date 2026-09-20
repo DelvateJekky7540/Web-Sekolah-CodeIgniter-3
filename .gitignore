@@ -1,32 +1,43 @@
+# Mac OS
 .DS_Store
 
+# CodeIgniter Cache
 application/cache/*
 !application/cache/index.html
 
+# CodeIgniter Logs
 application/logs/*
 !application/logs/index.html
 
+# Protect .htaccess
 !application/*/.htaccess
 
+# Composer
 composer.lock
+
+# SQLite Test Database
 tests/mocks/database/ci_test.sqlite
 
+# User Guide Build
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
+
+# Vendor
 /vendor/
 
 # IDE Files
-#-------------------------
 /nbproject/
 .idea/*
 
-## Sublime Text cache files
+# Sublime Text cache files
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+
+# CodeIgniter Tests
 /tests/tests/
 /tests/results/
