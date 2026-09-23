@@ -144,13 +144,14 @@
                         <h5 class="fw-semibold">Visi</h5>
                         <ol><?= $profil->visi ?></ol>
 
-                        <h5 class="fw-semibold mt-4">Misi</h5>
+                        <h5 class="fw-semibold mt-2">Misi</h5>
                         <ol>
                             <?php foreach (explode("\n", $profil->misi) as $misi): ?>
                                 <li><?= trim($misi); ?></li>
                             <?php endforeach; ?>
                         </ol>
                     </p>
+
                 </div>
             </div>
         </div>
@@ -247,201 +248,28 @@
                 </p>
             </div>
 
+
+            
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-4 text-center">
-                        <i class="bi bi-building fs-1 text-primary"></i>
+                <?php foreach ($industri as $i): ?>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100 p-4 text-center">
+                            <img src="<?= base_url('assets/img/industri/' . $i->logo_industri) ?>" class="img-fluid mb-3" style="height: 100px; max-width: 180px; object-fit: contain;">
 
-                        <h5 class="fw-bold mt-3">
-                            Mitra Industri 1
-                        </h5>
+                            <h5 class="fw-bold mt-3">
+                                <?= $i->nama_industri ?>
+                            </h5>
 
-                        <p class="text-secondary mb-0">
-                            Kerja sama praktik kerja lapangan
-                            dan pengembangan keterampilan.
-                        </p>
+                            <p class="text-secondary mb-0">
+                                <?= $i->bidang_industri ?>
+                            </p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-4 text-center">
-                        <i class="bi bi-briefcase fs-1 text-primary"></i>
-
-                        <h5 class="fw-bold mt-3">
-                            Mitra Industri 2
-                        </h5>
-
-                        <p class="text-secondary mb-0">
-                            Mendukung pengalaman kerja
-                            dan pengenalan dunia industri.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100 p-4 text-center">
-                        <i class="bi bi-people fs-1 text-primary"></i>
-
-                        <h5 class="fw-bold mt-3">
-                            Mitra Industri 3
-                        </h5>
-
-                        <p class="text-secondary mb-0">
-                            Membuka peluang kolaborasi
-                            dan pengembangan karier lulusan.
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
 
-
-
-	<!-- <section class="artikel py-5 bg-light">
-
-		<div class="container">
-
-			<div class="text-center mb-5 pt-4">
-
-				<h2 class="fw-bold text-white">
-					Artikel Terbaru
-				</h2>
-
-				<p class="fw-bold text-white">
-					Berita dan informasi terbaru SMP Negeri 2 Karanganyar
-				</p>
-
-			</div>
-
-			<div class="row ">
-
-				<?php foreach($artikel as $a): ?>
-
-				<div class="col-md-4 mb-4">
-
-					<div class="card border-0 shadow-sm h-100 artikel-card">
-
-						<div class="overflow-hidden">
-
-							<img src="<?= base_url('assets/img/artikel/'.$a->gambar) ?>"
-								class="card-img-top artikel-img">
-
-						</div>
-
-						<div class="card-body d-flex flex-column">
-
-							<small class="text-muted mb-2">
-
-								<i class="bi bi-calendar-event"></i>
-
-								<?= date('d M Y', strtotime($a->tanggal)) ?>
-
-							</small>
-
-							<h5 class="fw-bold">
-
-								<?= $a->judul ?>
-
-							</h5>
-
-							<p class="text-muted small flex-grow-1">
-
-								<?= substr(strip_tags($a->deskripsi), 0, 120) ?>...
-
-							</p>
-
-							<a href="<?= base_url('artikel/'.$a->slug) ?>"
-								class="btn btn-success rounded-pill mt-auto">
-
-								Baca Selengkapnya
-
-							</a>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<?php endforeach; ?>
-
-			</div>
-
-		</div>
-
-	</section> -->
-
-	<section class="section" id="berita">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
-                <div>
-                    <span class="text-primary fw-semibold">
-                        PROFIL SEKOLAH
-                    </span>
-
-                    <h2 class="fw-bold mt-2">
-                        Mitra Dunia Kerja
-                    </h2>
-                </div>
-
-
-                <a href="<?= base_url('home/artikel') ?>" class="btn btn-outline-primary">
-                    Lihat Semua Berita
-                    <i class="bi bi-arrow-right ms-2"></i>
-                </a>
-            </div>
-
-
-            <div class="row g-4">
-				<?php foreach($artikel as $a): ?>
-                <div class="col-md-6 col-lg-4">
-                    <div class="article-card">
-                        <img src="<?= base_url('assets/img/artikel/'.$a->gambar) ?>" class="article-image">
-
-
-                        <div class="article-body">
-
-
-                            <div>
-
-                                <span class="article-badge">
-                                    KEGIATAN
-                                </span>
-
-                                <span class="article-date">
-									<i class="bi bi-calendar-event"></i>
-                                    <?= date('d M Y', strtotime($a->tanggal)) ?>
-                                </span>
-
-                            </div>
-
-
-                            <h5>
-								<?= $a->judul ?>
-                            </h5>
-
-
-                            <p>
-								<?= substr(strip_tags($a->deskripsi), 0, 120) ?>...
-                            </p>
-
-
-                            <a href="<?= base_url('artikel/'.$a->slug) ?>" class="program-link">
-                                Baca Selengkapnya
-                                <i class="bi bi-arrow-right ms-1"></i>
-                            </a>
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-				<?php endforeach; ?>
-        	</div>
-		</div>
-    </section>
 
 	<?php $this->load->view('layouts/home/_footer') ?>
 	<?php $this->load->view('layouts/home/_chatbot') ?>

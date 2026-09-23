@@ -36,11 +36,11 @@
 				</li>
 
 				<li class="pc-item">
-					<a href="../dashboard/index.html" class="pc-link">
+					<a href="<?= base_url('admin/industri') ?>" class="pc-link">
 						<span class="pc-micon">
 							<i class="ti ti-dashboard"></i>
 						</span>
-						<span class="pc-mtext">Default</span>
+						<span class="pc-mtext">Industri</span>
 					</a>
 				</li>
 
