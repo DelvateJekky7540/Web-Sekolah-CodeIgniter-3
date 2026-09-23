@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
-	<?php $this->load->view('layouts/_css'); ?>
+	<?php $this->load->view('layouts/home/_css'); ?>
 </head>
 
 <body>
-	<?php $this->load->view('layouts/_nav'); ?>
+	<?php $this->load->view('layouts/home/_nav'); ?>
 	
     <section id="beranda" class="hero text-white d-flex align-items-center">
 
@@ -140,14 +140,16 @@
                         SMK Negeri 2 Karanganyar
                     </h2>
 
-                    <p class="text-secondary">
+                    <p class="text-secondary mt-5">
                         <h5 class="fw-semibold">Visi</h5>
-                        Terwujudnya Lulusan yang Berkarakter, Berprestasi, Berwawasan Global dan Berbudaya Lingkungan
+                        <ol><?= $profil->visi ?></ol>
 
                         <h5 class="fw-semibold mt-4">Misi</h5>
-                        1. Menanamkan keimanan dan ketaqwaan kepada Tuhan YME melalui pengamalan ajaran agama <br>
-                        2. Mewujudkan profil lulusan yang kompetitif, kolaboratif, dan bernalar kritis <br>
-                        3. Menyelenggarakan Pembelajaran yang Berkualitas, Berwawasan Global dan Berbudaya Lingkungan
+                        <ol>
+                            <?php foreach (explode("\n", $profil->misi) as $misi): ?>
+                                <li><?= trim($misi); ?></li>
+                            <?php endforeach; ?>
+                        </ol>
                     </p>
                 </div>
             </div>
@@ -374,12 +376,12 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
                 <div>
-                    <div class="section-label">
-                        Artikel & Berita
-                    </div>
+                    <span class="text-primary fw-semibold">
+                        PROFIL SEKOLAH
+                    </span>
 
-                    <h2 class="section-title mb-0">
-                        Prestasi
+                    <h2 class="fw-bold mt-2">
+                        Mitra Dunia Kerja
                     </h2>
                 </div>
 
@@ -441,8 +443,8 @@
 		</div>
     </section>
 
-	<?php $this->load->view('layouts/_footer') ?>
-	<?php $this->load->view('layouts/_chatbot') ?>
+	<?php $this->load->view('layouts/home/_footer') ?>
+	<?php $this->load->view('layouts/home/_chatbot') ?>
 
 	
 	

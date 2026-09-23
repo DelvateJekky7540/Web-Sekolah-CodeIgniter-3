@@ -36,7 +36,7 @@
 	<div class="pc-container">
 		<div class="pc-content">
 			<!-- [ Main Content ] start -->
-			<h1>ini dashboard</h1>
+			<?= $contents ?>
 			<!-- [ Main Content ] end -->
 		</div>
 	</div>
@@ -51,9 +51,8 @@
 	<!-- Required Js -->
 	<?php $this->load->view('layouts/admin/_js') ?>
 	
-
-
 </body>
 <!-- [Body] end -->
 
 </html>
+
