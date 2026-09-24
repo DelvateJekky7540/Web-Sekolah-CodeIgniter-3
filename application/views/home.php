@@ -10,13 +10,9 @@
 	<?php $this->load->view('layouts/home/_nav'); ?>
 	
     <section id="beranda" class="hero text-white d-flex align-items-center">
-
 		<div class="container">
-
 			<div class="row align-items-center g-5">
-
 				<div class="col-lg-6">
-
 					<span class="badge bg-light text-primary px-3 py-2 mb-3">SMK Pusat Keunggulan</span>
 
 					<h1 class="display-4 fw-bold mb-4">
@@ -28,15 +24,13 @@
 					</p>
 
 					<div class="d-flex flex-wrap gap-2">
-
 						<a href="https://spmb.jatengprov.go.id/" class="btn btn-primary btn-lg fw-semibold">
 							<i class="bi bi-mortarboard-fill me-2"></i>Informasi PPDB
 						</a>
 
 						<a href="<?= base_url('home/profil') ?>" class="btn btn-outline-light btn-lg">
 							Kenali Sekolah
-						</a>
-
+						</a>    
 					</div>
 
 				</div>
@@ -44,11 +38,8 @@
                 <div class="col-5">
                     <img src="<?= base_url('assets/img/hero.png') ?>" style="width: 107%;">
                 </div>
-
 			</div>
-
 		</div>
-
 	</section>
 
 	<section class="stats-section">
@@ -82,7 +73,6 @@
                         <div class="stat-title">
                             Guru
                         </div>
-
                     </div>
 
                     <div class="col-3">
@@ -97,7 +87,6 @@
                         <div class="stat-title">
                             Staff & Karyawan
                         </div>
-
                     </div>
 
                     <div class="col-3">
@@ -112,14 +101,10 @@
                         <div class="stat-title">
                             Mata Pelajaran
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </div>
-
     </section>
 
 	<!-- PROFIL SEKOLAH -->
